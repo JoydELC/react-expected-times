@@ -1,38 +1,169 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  body {
+    background: radial-gradient(circle, rgb(10 60 202) 0%, #042e52 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px; /* Set base font size */
   }
-  to {
-    transform: rotate(360deg);
+  
+  .formTimes {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
   }
-}
+  
+  .formTimes h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem; /* Adjust font size for headings */
+  }
+  
+  .formTimes form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .formTimes form div {
+    width: 48%;
+    margin-bottom: 20px;
+    margin-right: 5px;
+  }
+  
+  .formTimes form div label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .formTimes form div input {
+    width: 100%;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem; /* Adjust input font size */
+  }
+  
+  .formTimes form div span {
+    color: red;
+    font-size: 0.8em;
+  }
+  
+  .formTimes form div:last-child {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .formTimes form div:last-child input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem; /* Adjust submit button font size */
+  }
+  
+  @media (max-width: 768px) {
+    .formTimes form div {
+      width: 100%;
+    }
+  
+    /* Additional media queries for smaller screens */
+    body {
+      font-size: 14px; /* Decrease base font size for smaller screens */
+    }
+  
+    .formTimes h1 {
+      font-size: 1.2rem; /* Decrease heading font size */
+    }
+  
+    .formTimes form div input,
+    .formTimes form div:last-child input[type="submit"] {
+      font-size: 0.9rem; /* Decrease input and submit button font size */
+    }
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  .modal h2 {
+    margin-top: 0;
+    font-size: 1.5rem; /* Adjust modal heading font size */
+  }
+  
+  .modal p {
+    margin-bottom: 10px;
+    font-size: 1rem; /* Adjust modal paragraph font size */
+  }
+  
+  .modal ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .modal li {
+    margin-bottom: 5px;
+    font-size: 1rem; /* Adjust modal list item font size */
+  }
+  
+  .modal button {
+    margin-top: 20px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem; /* Adjust modal button font size */
+  }
+  
+  @media (max-width: 480px) {
+    /* Additional media queries for even smaller screens */
+    body {
+      font-size: 12px; /* Further decrease base font size */
+    }
+  
+    .formTimes h1,
+    .modal h2 {
+      font-size: 1.2rem; /* Further decrease heading font size */
+    }
+  
+    .formTimes form div input,
+    .formTimes form div:last-child input[type="submit"],
+    .modal p,
+    .modal li,
+    .modal button {
+      font-size: 0.8rem; /* Further decrease input, submit button, and modal content font size */
+    }
+  }
