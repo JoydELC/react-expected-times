@@ -27,22 +27,22 @@ const TimesForm = () => {
       <div className="formTimes">
         <h1>Información Tiempo</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div>
-            <label>Tiempo Actual (en s) :</label>
-            <input
-              type="text"
-              name="TA"
-              placeholder="Cual es mi tiempo actual"
-              {...register("TA", {
-                required: "este campo es obligatorio",
-                pattern: {
-                  value: /^\d+(\.\d+)?$/,
-                  message: "debe ser un número",
-                },
-              })}
-            />
-            {errors.TA && <span>{errors.TA.message}</span>}
-          </div>
+        <div>
+  <label>Tiempo Actual (mm:ss:msms) :</label>
+  <input
+  type="text"
+  name="TA"
+  placeholder="Cual es mi tiempo actual"
+  {...register("TA", {
+    required: "este campo es obligatorio",
+    pattern: {
+      value: /^([0-5]?[0-9]):[0-5][0-9]:[0-9]{2}$/,
+      message: "debe estar en formato mm:ss:msms",
+    },
+  })}
+/>
+  {errors.TA && <span>{errors.TA.message}</span>}
+</div>
           <div>
             <label>Distancia (mts) :</label>
             <input
@@ -60,7 +60,7 @@ const TimesForm = () => {
             {errors.d && <span>{errors.d.message}</span>}
           </div>
           <div>
-            <label>Porcentaje a mejorar :</label>
+            <label>Porcentaje a mejorar (%) :</label>
             <input
               type="text"
               name="porc"
@@ -84,7 +84,7 @@ const TimesForm = () => {
             {errors.porc && <span>{errors.porc.message}</span>}
           </div>
           <div>
-            <label>Numero de eventos en el ciclo :</label>
+            <label>Numero de Competencias :</label>
             <input
               type="text"
               name="eventos"
