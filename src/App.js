@@ -5,7 +5,7 @@ import SpeedTable from './component/SpeedTable.js';
 function App() {
   return (
     <div className="App">
-     <TimesForm/>
+      <SpeedTable/>
     </div>
   );
 }

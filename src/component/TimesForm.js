@@ -25,7 +25,7 @@ const TimesForm = () => {
   return (
     <>
       <div className="formTimes">
-        <h1>Información Tiempo</h1>
+        <h1>Información</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
         <div>
   <label>Tiempo Actual (mm:ss:msms) :</label>

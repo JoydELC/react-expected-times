@@ -12,7 +12,9 @@ body, html {
     align-items: center;
     font-size: 16px; /* Set base font size */
   }
-  
+  .container-app h1{
+    color: white;
+  }
   .formTimes {
     max-width: 500px;
     margin: 0 auto;
@@ -25,6 +27,7 @@ body, html {
     text-align: center;
     margin-bottom: 20px;
     font-size: 1.5rem; /* Adjust font size for headings */
+    color: black;
   }
   
   .formTimes form {
@@ -166,4 +169,88 @@ body, html {
     .modal button {
       font-size: 0.8rem; /* Further decrease input, submit button, and modal content font size */
     }
+  }
+
+  .table-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:  rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+  }
+  
+  /* Estilos del título */
+  .table-container h2 {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos de la tabla */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+  }
+  
+  th {
+    background-color: #005CB9;
+    color: #fff;
+  }
+  
+/* Estilos de la primera fila y las filas de RI, RII y VO2 */
+thead tr, tr:nth-child(3n+1) th {
+  background-color: #005CB9;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+  }
+  
+  /* Estilos responsive */
+  @media (max-width: 600px) {
+    table {
+      font-size: 12px;
+    }
+  
+    th, td {
+      padding: 5px;
+    }
+  }
+  
+  /* Estilos de los botones */
+  .table-container button {
+    background-color: #005CB9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+  }
+  
+  .table-container button:hover {
+    background-color: #003B79;
+  }
+  
+  .table-container button:active {
+    background-color: #002855;
+    transform: translateY(2px);
   }
