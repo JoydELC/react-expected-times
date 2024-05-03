@@ -194,14 +194,14 @@ table {
   border-collapse: collapse;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
-  overflow: hidden;
+  overflow-x: auto; /* Permitir desplazamiento horizontal en pantallas pequeñas */
 }
 
 th, td {
-  padding: 5px;
+  padding: 8px; /* Aumentar el padding para mejorar la legibilidad */
   text-align: center;
   border: 1px solid black;
-  font-size: 0.8rem;
+  font-size: 1rem; /* Ajustar el tamaño de fuente */
 }
 
 th {
@@ -237,7 +237,7 @@ input[type="text"] {
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin: 5px;
-  font-size: 0.8rem;
+  font-size: 1rem; /* Ajustar el tamaño de fuente */
 }
 
 .table-container button:hover {
@@ -247,4 +247,30 @@ input[type="text"] {
 .table-container button:active {
   background-color: #002855;
   transform: translateY(2px);
+}
+
+/* Estilos adicionales para pantallas pequeñas */
+@media (max-width: 768px) {
+  .table-container {
+    overflow-x: auto; /* Permitir desplazamiento horizontal en pantallas pequeñas */
+  }
+
+  table {
+    font-size: 0.9rem; /* Reducir tamaño de fuente en pantallas pequeñas */
+  }
+
+  .table-container button {
+    font-size: 0.9rem; /* Reducir tamaño de fuente de botones en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes adicionales para pantallas aún más pequeñas */
+  table {
+    font-size: 0.8rem; /* Reducir tamaño de fuente en pantallas muy pequeñas */
+  }
+
+  .table-container button {
+    font-size: 0.8rem; /* Reducir tamaño de fuente de botones en pantallas muy pequeñas */
+  }
 }
