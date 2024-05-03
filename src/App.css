@@ -7,10 +7,10 @@ body, html {
   
   body {
     background: radial-gradient(circle, rgb(10 60 202) 0%, #042e52 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px; /* Set base font size */
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
   }
   .container-app h1{
     color: white;
@@ -171,41 +171,44 @@ body, html {
     }
   }
 
-  .table-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color:  rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-  }
-  
-  /* Estilos del título */
-  .table-container h2 {
-    text-align: center;
-    color: black;
-    margin-bottom: 20px;
-  }
-  
-  /* Estilos de la tabla */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  
-  th, td {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid black;
-  }
-  
-  th {
-    background-color: #005CB9;
-    color: #fff;
-  }
-  
+ /* Estilos del contenedor principal */
+.table-container {
+  max-width: 100%;
+  margin: 20px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+}
+
+/* Estilos del título */
+.table-container h2 {
+  text-align: center;
+  color: black;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* Estilos de la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 5px;
+  text-align: center;
+  border: 1px solid black;
+  font-size: 0.8rem;
+}
+
+th {
+  background-color: #005CB9;
+  color: #fff;
+}
+
 /* Estilos de la primera fila y las filas de RI, RII y VO2 */
 thead tr, tr:nth-child(3n+1) th {
   background-color: #005CB9;
@@ -213,44 +216,35 @@ thead tr, tr:nth-child(3n+1) th {
   font-weight: bold;
   text-align: center;
 }
-  
-  input[type="text"] {
-    width: 100%;
-    padding: 5px;
-    border: none;
-    border-radius: 3px;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #333;
-  }
-  
-  /* Estilos responsive */
-  @media (max-width: 600px) {
-    table {
-      font-size: 12px;
-    }
-  
-    th, td {
-      padding: 5px;
-    }
-  }
-  
-  /* Estilos de los botones */
-  .table-container button {
-    background-color: #005CB9;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin: 10px;
-  }
-  
-  .table-container button:hover {
-    background-color: #003B79;
-  }
-  
-  .table-container button:active {
-    background-color: #002855;
-    transform: translateY(2px);
-  }
+
+input[type="text"] {
+  width: 100%;
+  padding: 3px;
+  border: none;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  font-size: 0.8rem;
+}
+
+/* Estilos de los botones */
+.table-container button {
+  background-color: #005CB9;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px;
+  font-size: 0.8rem;
+}
+
+.table-container button:hover {
+  background-color: #003B79;
+}
+
+.table-container button:active {
+  background-color: #002855;
+  transform: translateY(2px);
+}
