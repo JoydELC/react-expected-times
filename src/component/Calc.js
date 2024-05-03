@@ -33,11 +33,11 @@ const Calc = ({ formData, onClear }) => {
         {showResults ? (
           <>
             <h2>Resultados</h2>
-            <p>Tiempo Actual: {formatTime(PBS.slice(-1)*1000)}</p>
+            <p>Tiempo Actual: {TA}</p>
             <p>Distancia: {d} mts</p>
             <p>Porcentaje quiero mejorar: {porc} %</p>
             <p>Cantidad de competencias: {eventos}</p>
-            <p>Tiempo Pronostico: {formatTime(TP * 1000)}</p>
+            <p>Tiempo Pronostico: {formatTime(PBS.slice(-1)*1000)}</p>
             <p>Tiempos a cumplir:</p>
             <ul>
               {PBS.map((pb, index) => (

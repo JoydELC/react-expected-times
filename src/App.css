@@ -1,243 +1,233 @@
+/* Estilos generales */
 body, html {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    background: radial-gradient(circle, rgb(10 60 202) 0%, #042e52 100%);
-    font-family: Arial, sans-serif;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-  }
-  .container-app h1{
-    color: white;
-  }
-  .formTimes {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
-  }
-  
-  .formTimes h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 1.5rem; /* Adjust font size for headings */
-    color: black;
-  }
-  
-  .formTimes form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .formTimes form div {
-    width: 48%;
-    margin-bottom: 20px;
-    margin-right: 5px;
-  }
-  
-  .formTimes form div label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .formTimes form div input {
-    width: 100%;
-    padding: 6px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    font-size: 1rem; /* Adjust input font size */
-  }
-  
-  .formTimes form div span {
-    color: red;
-    font-size: 0.8em;
-  }
-  
-  .formTimes form div:last-child {
-    width: 100%;
-    text-align: center;
-  }
-  
-  .formTimes form div:last-child input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem; /* Adjust submit button font size */
-  }
-  
-  @media (max-width: 768px) {
-    .formTimes form div {
-      width: 100%;
-    }
-  
-    /* Additional media queries for smaller screens */
-    body {
-      font-size: 14px; /* Decrease base font size for smaller screens */
-    }
-  
-    .formTimes h1 {
-      font-size: 1.2rem; /* Decrease heading font size */
-    }
-  
-    .formTimes form div input,
-    .formTimes form div:last-child input[type="submit"] {
-      font-size: 0.9rem; /* Decrease input and submit button font size */
-    }
-  }
-  
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
-  
-  .modal {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    max-width: 500px;
-    width: 100%;
-    max-height: 80vh;
-    overflow-y: auto;
-  }
-  
-  .modal h2 {
-    margin-top: 0;
-    font-size: 1.5rem; /* Adjust modal heading font size */
-  }
-  
-  .modal p {
-    margin-bottom: 10px;
-    font-size: 1rem; /* Adjust modal paragraph font size */
-  }
-  
-  .modal ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .modal li {
-    margin-bottom: 5px;
-    font-size: 1rem; /* Adjust modal list item font size */
-  }
-  
-  .modal button {
-    margin-top: 20px;
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem; /* Adjust modal button font size */
-  }
-  
-  @media (max-width: 480px) {
-    /* Additional media queries for even smaller screens */
-    body {
-      font-size: 12px; /* Further decrease base font size */
-    }
-  
-    .formTimes h1,
-    .modal h2 {
-      font-size: 1.2rem; /* Further decrease heading font size */
-    }
-  
-    .formTimes form div input,
-    .formTimes form div:last-child input[type="submit"],
-    .modal p,
-    .modal li,
-    .modal button {
-      font-size: 0.8rem; /* Further decrease input, submit button, and modal content font size */
-    }
-  }
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
- /* Estilos del contenedor principal */
-.table-container {
-  max-width: 100%;
-  margin: 20px;
-  padding: 10px;
+body {
+  background: radial-gradient(circle, rgb(10 60 202) 0%, #042e52 100%);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos del contenedor principal */
+.container-app {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 75px;
+}
+
+.container-app > h1 {
+  color: #333;
+  font-size: 2rem;
+}
+
+/* Estilos del formulario */
+.formTimes {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
 }
 
-/* Estilos del título */
-.table-container h2 {
+.formTimes h1 {
   text-align: center;
-  color: black;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.formTimes form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.formTimes form div {
+  width: 48%;
+  margin-bottom: 20px;
+  margin-right: 5px;
+}
+
+.formTimes form div label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.formTimes form div input {
+  width: 100%;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.formTimes form div span {
+  color: red;
+  font-size: 0.8em;
+}
+
+.formTimes form div:last-child {
+  width: 100%;
+  text-align: center;
+}
+
+.formTimes form div:last-child input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Estilos del modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.modal p {
   margin-bottom: 10px;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.modal ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.modal li {
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.modal button {
+  margin-top: 20px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
 /* Estilos de la tabla */
+
+.table-container {
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  text-align: center;
+  overflow: auto; /* Añadido para permitir scroll si la tabla es más grande */
+}
+
+.table-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
 table {
   width: 100%;
-  border-collapse: collapse;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 5px;
-  overflow-x: auto; /* Permitir desplazamiento horizontal en pantallas pequeñas */
+  max-width: 100%; /* Establecer un ancho máximo del 100% */
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 th, td {
-  padding: 8px; /* Aumentar el padding para mejorar la legibilidad */
+  padding: 12px 15px;
   text-align: center;
-  border: 1px solid black;
-  font-size: 1rem; /* Ajustar el tamaño de fuente */
+  border: 1px solid #ddd;
+  font-size: 1.1rem;
 }
 
-th {
-  background-color: #005CB9;
-  color: #fff;
-}
-
-/* Estilos de la primera fila y las filas de RI, RII y VO2 */
-thead tr, tr:nth-child(3n+1) th {
-  background-color: #005CB9;
+thead tr th {
+  background-color: #003B79;
   color: #fff;
   font-weight: bold;
   text-align: center;
 }
 
-input[type="text"] {
-  width: 100%;
-  padding: 3px;
-  border: none;
-  border-radius: 3px;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #333;
-  font-size: 0.8rem;
+tr:nth-child(3n+1) th {
+  background-color: #005CB9;
+  color: #fff;
+  font-weight: bold;
+  text-align: left;
 }
 
-/* Estilos de los botones */
+td {
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 1rem;
+}
+
 .table-container button {
   background-color: #005CB9;
   color: #fff;
   border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
+  padding: 10px 20px;
+  border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin: 5px;
-  font-size: 1rem; /* Ajustar el tamaño de fuente */
+  margin: 10px 5px;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .table-container button:hover {
@@ -248,29 +238,37 @@ input[type="text"] {
   background-color: #002855;
   transform: translateY(2px);
 }
-
-/* Estilos adicionales para pantallas pequeñas */
+/* Estilos responsivos */
 @media (max-width: 768px) {
-  .table-container {
-    overflow-x: auto; /* Permitir desplazamiento horizontal en pantallas pequeñas */
+  .formTimes form div {
+    width: 100%;
   }
 
   table {
-    font-size: 0.9rem; /* Reducir tamaño de fuente en pantallas pequeñas */
-  }
-
-  .table-container button {
-    font-size: 0.9rem; /* Reducir tamaño de fuente de botones en pantallas pequeñas */
+    font-size: 0.6rem;
   }
 }
 
 @media (max-width: 480px) {
-  /* Ajustes adicionales para pantallas aún más pequeñas */
-  table {
-    font-size: 0.8rem; /* Reducir tamaño de fuente en pantallas muy pequeñas */
+  body {
+    font-size: 14px;
   }
 
-  .table-container button {
-    font-size: 0.8rem; /* Reducir tamaño de fuente de botones en pantallas muy pequeñas */
+  .container-app > h1,
+  .formTimes h1,
+  .modal h2 {
+    font-size: 1.2rem;
+  }
+
+  .formTimes form div input,
+  .formTimes form div:last-child input[type="submit"],
+  .modal p,
+  .modal li,
+  .modal button {
+    font-size: 0.9rem;
+  }
+
+  table {
+    font-size: 0.4rem;
   }
 }
