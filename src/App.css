@@ -9,19 +9,17 @@ body, html {
 
 body {
   background: radial-gradient(circle, rgb(10 60 202) 0%, #042e52 100%);
-  justify-content: center;
-  align-items: center;
+  
 }
 
 /* Estilos del contenedor principal */
 .container-app {
-  width: 90%;
-  max-width: 800px;
+  width: 70%;
+  max-width:auto;
   margin: 20px auto;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
-  text-align: center;
   margin-top: 75px;
 }
 
@@ -32,7 +30,7 @@ body {
 
 /* Estilos del formulario */
 .formTimes {
-  max-width: 500px;
+  max-width: auto;
   margin: 0 auto;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.8);
