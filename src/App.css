@@ -13,7 +13,7 @@ body {
 
 /* Estilos del contenedor principal */
 .container-app {
-  width: 90%;
+  width: 80%;
   max-width: 1200px; /* Establecer un ancho máximo para el contenedor */
   margin: 20px auto;
   padding: 20px;
@@ -151,12 +151,12 @@ body {
 /* Estilos de la tabla */
 .table-container {
   max-width: 100%;
-  margin: 20px auto;
-  padding: 20px;
+  margin: 10px auto;
+  padding: 10px;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 8px;
   text-align: center;
-  overflow-x: auto; /* Permitir desplazamiento horizontal */
+  overflow-x: auto;
 }
 
 .table-container h2 {
@@ -168,20 +168,18 @@ body {
 
 table {
   width: 100%;
-  max-width: none; /* Permitir que la tabla se extienda más allá del contenedor */
-  border-collapse: separate;
-  border-spacing: 0 8px;
+  border-collapse: collapse;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 0 auto; /* Centrar la tabla dentro del contenedor */
 }
 
 th, td {
   padding: 12px 15px;
   text-align: center;
   border: 1px solid #ddd;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  
 }
 
 thead tr th {
@@ -191,19 +189,19 @@ thead tr th {
   text-align: center;
 }
 
-tr:nth-child(3n+1) th {
-  background-color: #005CB9;
-  color: #fff;
-  font-weight: bold;
-  text-align: left;
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
 }
 
 td {
   color: #333;
-  background-color: #f5f5f5;
 }
 
-input[type="text"] {
+.input-text {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
@@ -237,35 +235,13 @@ input[type="text"] {
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
-  .formTimes form div {
-    width: 100%;
-  }
-
   table {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-
-  .container-app > h1,
-  .formTimes h1,
-  .modal h2 {
-    font-size: 1.2rem;
-  }
-
-  .formTimes form div input,
-  .formTimes form div:last-child input[type="submit"],
-  .modal p,
-  .modal li,
-  .modal button {
-    font-size: 0.9rem;
-  }
-
   table {
-    font-size: 0.4rem;
+    font-size: 0.8rem;
   }
 }
