@@ -18,7 +18,7 @@ const timeRegex = /^([0-9]|[0-5][0-9]):([0-5][0-9]):([0-5][0-9])$/;
 
 export const Tablavel = () => {
   const [tiempo, setTiempo] = useState('');
-  const [distancia, setDistancia] = useState();
+  const [distancia, setDistancia] = useState(400);
   const [resultados, setResultados] = useState({ r1: [], r2: [], vo2: [] });
   const [errorMsg, setErrorMsg] = useState('');
 
