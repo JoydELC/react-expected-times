@@ -25,10 +25,10 @@ export function tiempo_pronostico(TA, porcentaje, d) {
     return PBS;
   }
 
-  export function tablaTiempos(tiempo800){
+  export function tablaTiempos(tiempo,distancia){
     const add = [0,0,0,1,2,3,4,5,6];
     const dist = [50,75,100,150,200,300,400,800,1500];
-    let prom100= (tiempo800*100)/800;
+    let prom100= (tiempo*100)/distancia;
     let r1 =[];
     let r2 =[];
     let vo2 =[];

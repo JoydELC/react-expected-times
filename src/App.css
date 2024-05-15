@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* /* /* /* Estilos generales 
 body, html {
   width: 100%;
   height: 100%;
@@ -11,10 +11,10 @@ body {
   background: radial-gradient(circle, rgb(10 60 202) 0%, #042e52 100%);
 }
 
-/* Estilos del contenedor principal */
+/* Estilos del contenedor principal 
 .container-app {
   width: 80%;
-  max-width: 1200px; /* Establecer un ancho máximo para el contenedor */
+  max-width: 1200px; /* Establecer un ancho máximo para el contenedor 
   margin: 20px auto;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.8);
@@ -27,7 +27,7 @@ body {
   font-size: 2rem;
 }
 
-/* Estilos del formulario */
+/* Estilos del formulario 
 .formTimes {
   max-width: auto;
   margin: 0 auto;
@@ -90,7 +90,7 @@ body {
   font-size: 1rem;
 }
 
-/* Estilos del modal */
+/* Estilos del modal 
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -148,7 +148,7 @@ body {
   cursor: pointer;
   font-size: 1rem;
 }
-/* Estilos de la tabla */
+/* Estilos de la tabla 
 .table-container {
   max-width: 100%;
   margin: 10px auto;
@@ -233,7 +233,7 @@ td {
   transform: translateY(2px);
 }
 
-/* Estilos responsivos */
+/* Estilos responsivos 
 @media (max-width: 768px) {
   table {
     font-size: 0.9rem;
@@ -243,5 +243,257 @@ td {
 @media (max-width: 480px) {
   table {
     font-size: 0.8rem;
+  }
+} */ 
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html{
+  font-size: 62.5%;
+}
+.App {
+  background: radial-gradient(circle, rgb(10 60 202) 0%, #042e52 100%);;
+  height: 100vh;
+  width: 100%;
+}
+/* Nav css */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:rgb(6, 6, 90);
+}
+nav h1 {
+  font-size: 1.6rem;
+  color: white;
+  font: bold;
+  margin: 1rem;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  display :block;
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+nav .active {
+  background-color: #042e52;
+}
+
+nav .nav__menu {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+}
+nav .nav__menu span{
+  height: 0.4rem;
+  width: 100%;
+  background-color: white;
+  border-radius: 0.2rem;
+}
+/* Estilos del formulario*/ 
+.formTimes {
+  max-width: auto;
+  padding: 2.5rem;
+  margin: 1.5rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.8rem;
+}
+
+.formTimes h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #333;
+  font: bold;
+}
+
+.formTimes form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem ;
+}
+
+.formTimes form div label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+  margin-top: 0.4rem;
+}
+
+.formTimes form div input {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 0.4rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-top:0.6rem;
+}
+
+.formTimes form div span {
+  color: red;
+  font-size: 0.8em;
+}
+
+.formTimes form div:last-child {
+  width: 100%;
+  text-align: center;
+}
+
+.formTimes form div:last-child input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+/* Estilos del modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  margin: 1rem;
+}
+
+.modal h2 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.modal p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.modal ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.modal li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.modal button {
+  margin-top: 2rem;
+  padding: 0.8rem 1.6rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+/*Table css*/
+table{
+  background-color: white;
+
+}
+td{
+  font-weight: bold;
+}
+.table-container input{
+  width: 100%;
+}
+th{
+  background-color: rgb(6, 6, 90);
+  color: white;
+  font-weight: bold;
+}
+.table-container button {
+  margin: 1rem;
+  
+  padding: 0.8rem 1.6rem;
+  background-color: white;
+  color: rgb(6, 6, 90);
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.table-container h2 {
+  margin-top: 2rem;
+  text-align: center;
+  color: white;
+}
+@media (max-width: 480px) {
+  nav .nav__menu{
+    display: flex;
+  }
+  nav {
+    flex-direction: column;
+    align-items: start;
+  }
+  nav ul {
+    display:none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+  nav ul.open{
+    display: flex;
+  }
+  /*Table  css*/
+  table {
+    width: 80vw;
+    padding: 0.4rem;
+    margin: 1.25rem auto;
+  }
+  table td {
+    font-size: 0.7rem;
+    padding: 0.1rem;
+    text-align: center;
+  }
+  table,th, td {
+    border: 0.01rem solid;
   }
 }

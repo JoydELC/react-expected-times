@@ -1,11 +1,22 @@
 import './App.css';
-import TimesForm from './component/TimesForm.js';
-import SpeedTable from './component/SpeedTable.js';
+import { Nav } from './comp/Nav';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { TProno } from './comp/TProno';
+import { Tablavel } from './comp/Tablavel';
+
 
 function App() {
   return (
+
     <div className="App">
-      <SpeedTable/>
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route path='/' element={<TProno/>} />
+          <Route path='/tp' element={<TProno/>} />
+          <Route path='/tv' element={<Tablavel/>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
