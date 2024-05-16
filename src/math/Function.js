@@ -26,13 +26,13 @@ export function tiempo_pronostico(TA, porcentaje, d) {
   }
 
   export function tablaTiempos(tiempo,distancia){
-    const add = [0,0,0,1,2,3,4,5,6];
-    const dist = [50,75,100,150,200,300,400,800,1500];
+    const add = [0,0,0,0.5,1,1.5,2,2.5,3,7,9,14];
+    const dist = [50,75,100,150,200,250,300,350,400,800,1000,1500];
     let prom100= (tiempo*100)/distancia;
     let r1 =[];
     let r2 =[];
     let vo2 =[];
-    for (let i = 0; i < 9; i++) {
+    for (let i = 0; i < 12; i++) {
       let t1 = (prom100+3+add[i])*dist[i]/100;
       let t2 = (prom100+add[i])*dist[i]/100;
       let t3 = (prom100-3+add[i])*dist[i]/100;
