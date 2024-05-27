@@ -1,0 +1,172 @@
+/* Estilos del formulario */
+.formTimes {
+    max-width: 600px;
+    padding: 2rem;
+    margin: 8rem auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 0.8rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 2rem;
+  }
+  
+  .formTimes h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .formTimes form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem;
+  }
+  
+  .formTimes form div {
+    margin-bottom: 1rem;
+  }
+  
+  .formTimes form div label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .formTimes form div input {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    border: 1px solid #ccc;
+    font-size: 1.5rem;
+  }
+  
+  .formTimes form div span {
+    color: red;
+    font-size: 0.8rem;
+  }
+  
+  .formTimes form div:last-child {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .formTimes form div:last-child input[type="submit"] {
+    padding: 0.8rem 1.6rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+  
+  /* Estilos del modal */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .modal {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  .modal .name-fecha{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .modal h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .modal p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .modal ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .modal li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .modal button {
+    margin-top: 2rem;
+    padding: 0.8rem 1.6rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  /* Estilos para pantallas pequeñas */
+  @media (max-width: 480px) {
+    .formTimes {
+      padding: 1rem;
+      margin: 6rem 1rem;
+    }
+  
+    .formTimes h1 {
+      font-size: 2.5rem;
+    }
+  
+    .modal {
+      padding: 1rem;
+    }
+  
+    .modal h2 {
+      font-size: 1.6rem;
+    }
+  }
+  
+  /* Estilos para tabletas */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .formTimes {
+      max-width: 500px;
+    }
+  
+    .modal {
+      max-width: 500px;
+    }
+  }
+  
+  /* Estilos para pantallas de escritorio */
+  @media (min-width: 769px) {
+    .formTimes {
+      max-width: 600px;
+    }
+  
+    .modal {
+      max-width: 600px;
+    }
+  }

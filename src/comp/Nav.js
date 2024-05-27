@@ -29,7 +29,7 @@ export const Nav = () => {
                     <NavLink to="/tv">Tabla Velocidades</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/te">Tabla Estilos</NavLink>
+                    <NavLink to="/te">Tabla Estilos Progresivo</NavLink>
                 </li>
             </ul>
         </nav>

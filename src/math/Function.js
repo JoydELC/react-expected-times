@@ -48,7 +48,7 @@ export function TablaLibre(tiempo25) {
   let sum = [0, 2, 5.25, 7, 16.5, 22, 37.5, 43, 62.875, 57, 88, 99, 132, 193, 281];
   let vr1_1 = [1.15, 1.1];
   let vr1_2 = [1.17, 1.12];
-  let vr1_3 = [1.2, 1.15];
+  let vr1_3 = [1.19, 1.15];
   let vr2_1 = [1.1, 1.05];
   let vr2_2 = [1.12, 1.08];
   let vo2_1 = 1.06;
@@ -112,7 +112,7 @@ export function TablaLibre(tiempo25) {
 export function TablaPechoMariposa(tiempo25) {
   let por = [1,2,3,4,6,8,10,12,16];
   let sum = [0,3,7.5,10,21,28,45,54,72];
-  let r1 = [1.15,1.17,1.2];
+  let r1 = [1.15,1.17,1.19];
   let r2 = [1.1,1.12];
   let vo2 = [1.06,1.08];
   let rl_v = [1.02,1.04];
@@ -163,9 +163,9 @@ export  function tablaCombinado(tiempo25) {
   let sum = [0,8,32];
   let r1_1 = [1.3,1.2,1.15];
   let r1_2 = [1.32,1.25,1.17];
-  let r1_3 =[1.35,1.3,1.2];
+  let r1_3 =[1.34,1.3,1.19];
   let r2_1 = [1.22,1.14,1.1];
-  let r2_2 = [1.25,1.18,1.12];
+  let r2_2 = [1.24,1.18,1.12];
   let vo2_1 = [1.15,1.1,1.08];
   let vo2_2 = [1.18,1.12,1.09];
   let pron = [];

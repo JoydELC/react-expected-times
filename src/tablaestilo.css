@@ -1,0 +1,183 @@
+/* Estilos generales para la tabla */
+.table-indv table {
+    width: 90%;
+    border: 0.1rem solid;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: white;
+    margin: 0 auto;
+  }
+  
+  .tabla-libre td,
+  .tabla-espalda td,
+  .tabla-pecho td,
+  .tabla-mariposa td,
+  .tabla-combinado td {
+    border: 0.1rem solid;
+    border-collapse: collapse;
+  }
+  
+  .tabla-libre,
+  .tabla-espalda,
+  .tabla-pecho,
+  .tabla-mariposa,
+  .tabla-combinado {
+    margin: 2rem auto;
+  }
+  
+  .vacio {
+    background-color: #ccc;
+  }
+  
+  .r1 {
+    background-color: #00bf49;
+    font-weight: bold;
+  }
+  
+  .r2 {
+    background-color: #f8a13b;
+    font-weight: bold;
+  }
+  
+  .vo2 {
+    background-color: #ff56ee;
+    font-weight: bold;
+  }
+  
+  .rl {
+    background-color: #a1ffff;
+    font-weight: bold;
+  }
+  
+  .table-indv .vv {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .tabla-libre .blanco,
+  .tabla-espalda .blanco,
+  .tabla-mariposa .blanco,
+  .tabla-pecho .blanco {
+    background-color: white;
+  }
+  
+  .td-distancia {
+    background-color: #ffff80;
+  }
+  
+  .td-input {
+    background-color: red;
+  }
+  /* Estilos para los inputs */
+.table-indv input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem;
+  }
+  /* Estilos para los botones */
+  .td-button {
+    padding: 0.5rem;
+  }
+  
+  .calcular,
+  .limpiar {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .calcular {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .limpiar {
+    background-color: #dc3545;
+    color: white;
+  }
+  .calcular, .limpiar {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+  
+  /* Estilos para pantallas pequeñas (celulares) */
+  @media (max-width: 480px) {
+    .table-indv {
+      overflow-x: auto;
+    }
+  
+    .table-indv table {
+      width: 100%;
+      font-size: 0.7rem;
+      margin-top: 2rem;
+      font-weight: bold;
+    }
+  
+    .table-indv input {
+      width: 4rem;
+      height: 1rem;
+      font-size: 0.6rem;
+    }
+  
+    .table-indv td {
+      padding: 0.2rem;
+    }
+  
+    .table-indv th,
+    .table-indv td {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  
+    .calcular,
+    .limpiar {
+      font-size: 0.8rem;
+      padding: 0.3rem 0.6rem;
+    }
+  }
+  
+  /* Estilos para tabletas */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .table-indv table {
+      width: 90vw;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+      font-weight: bold;
+    }
+    .table-indv table td {
+        height: 2.5rem;
+    }
+  
+    .table-indv input {
+      width: 100%;
+      font-size: 0.8rem;
+    }
+    .calcular, .limpiar {
+        height: 2.5rem;
+    }
+  }
+  
+  /* Estilos para pantallas de escritorio */
+  @media (min-width: 769px) {
+    .table-indv table {
+      width: 90vh;
+      font-size: 1.2rem;
+      margin-top: 2rem;
+      font-weight: bold;
+    }
+  
+    .table-indv input {
+      width: 6rem;
+      font-size: 1rem;
+    }
+    .table-indv table td {
+        height: 2rem;
+    }
+  }

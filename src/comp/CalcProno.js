@@ -1,5 +1,7 @@
+// CalcProno.jsx
 import React, { useState } from "react";
 import { tiempo_pronostico, PB_evento } from "../math/Function";
+import "../tiempoP.css";
 
 const formatTime = (milliseconds) => {
   const minutes = Math.floor(milliseconds / 60000);
@@ -16,7 +18,7 @@ const parseTimeToMilliseconds = (timeStr) => {
 };
 
 export const CalcProno = ({ formData, onClear }) => {
-  const { TA, d, porc, eventos } = formData;
+  const { TA, d, porc, eventos, nombre, fecha } = formData;
   const TaInMilliseconds = parseTimeToMilliseconds(TA);
   const TP = tiempo_pronostico(TaInMilliseconds / 1000, parseFloat(porc), parseFloat(d));
   const PBS = PB_evento(TP, TaInMilliseconds / 1000, parseFloat(eventos));
@@ -33,11 +35,14 @@ export const CalcProno = ({ formData, onClear }) => {
         {showResults ? (
           <>
             <h2>Resultados</h2>
+            <div className="name-fecha">{nombre && <p>Nombre: {nombre}</p>}
+              {fecha && <p>Fecha: {fecha}</p>}
+            </div>
             <p>Tiempo Actual: {TA}</p>
             <p>Distancia: {d} mts</p>
             <p>Porcentaje quiero mejorar: {porc} %</p>
             <p>Cantidad de competencias: {eventos}</p>
-            <p>Tiempo Pronostico: {formatTime(PBS.slice(-1)*1000)}</p>
+            <p>Tiempo Pronostico: {formatTime(PBS.slice(-1) * 1000)}</p>
             <p>Tiempos a cumplir:</p>
             <ul>
               {PBS.map((pb, index) => (

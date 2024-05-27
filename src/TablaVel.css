@@ -1,0 +1,112 @@
+/* Table CSS */
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0;
+  }
+  
+  .table {
+    background-color: white;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-container .table td {
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: #ffff;
+  }
+  
+  .table-container .table input,
+  .table-container .table select {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  .table-container .table th {
+    background-color: rgb(6, 6, 90);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5rem;
+  }
+  
+  .table-container  button {
+    margin: 1rem;
+    padding: 0.8rem 1.6rem;
+    background-color: white;
+    color: rgb(6, 6, 90);
+    border: none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .table-container h2 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #ffff;
+    font-weight: bold;
+  }
+  
+  .table-container .table .row-distancia td {
+    background-color: #ffff80;
+  }
+  
+  /* Estilos para pantallas pequeñas */
+  @media (max-width: 480px) {
+    .table-container .table {
+      width: 90vw;
+      padding: 0.4rem;
+      margin: 1.25rem auto;
+    }
+  
+    .table-container table td {
+      font-size: 1rem;
+      padding: 0.1rem;
+    }
+  
+    .table-container table,
+    .table-container th,
+    .table-container td {
+      border: 0.01rem solid;
+    }
+  }
+  
+  /* Estilos para tabletas */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .table-container table {
+      width: 80vw;
+      font-size: 1.5rem;
+    }
+    .table-container  button {
+    font-weight: bold;
+    width: 12rem;
+    height: 3rem;
+    }
+  }
+  
+  /* Estilos para pantallas de escritorio */
+  @media (min-width: 769px) {
+    .table-container table {
+      width: 75vw;
+      max-width: 1200px;
+      font-size: 1.8rem;
+      padding: 3rem 2rem;
+    }
+    .table input{
+        font-size: 2rem;
+    }
+    .table-container  button {
+        font-weight: bold;
+        width: 12rem;
+        height: 3rem;
+        }
+  }
