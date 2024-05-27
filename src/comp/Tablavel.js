@@ -15,7 +15,7 @@ const parseTimeToMilliseconds = (timeStr) => {
   const [minutes, seconds, milliseconds] = timeStr.split(":").map((v, i) => (i === 0 ? parseInt(v) : parseFloat(v)));
   return minutes * 60000 + seconds * 1000 + milliseconds;
 };
-const timeRegex = /^([0-9]|[0-5][0-9]):([0-5][0-9]):([0-5][0-9])$/;
+const timeRegex = /^([0-5]?\d):([0-5]?\d):(([0-5]?\d)|([0-9][0-9]))$/;
 
 export const Tablavel = () => {
   const [tiempo, setTiempo] = useState('');
@@ -76,7 +76,7 @@ export const Tablavel = () => {
             <th colSpan="6">
               <input
                 type="text"
-                pattern="\d{2}:\d{2}:\d{2}"
+                pattern="^([0-5]\d):([0-5]\d):([0-9][0-9]|[0-8][0-9]|99)$"
                 title="Ingrese el tiempo en el formato 00:00:00"
                 placeholder="Tiempo"
                 value={tiempo}

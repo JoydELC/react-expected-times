@@ -15,7 +15,7 @@ const parseTimeToMilliseconds = (timeStr) => {
   const [minutes, seconds, milliseconds] = timeStr.split(":").map((v, i) => (i === 0 ? parseInt(v) : parseFloat(v)));
   return minutes * 60000 + seconds * 1000 + milliseconds;
 };
-const timeRegex = /^([0-9]|[0-5][0-9]):([0-5][0-9]):([0-5][0-9])$/;
+const timeRegex = /^([0-5]?\d):([0-5]?\d):(([0-5]?\d)|([0-9][0-9]))$/;
 
 
 export const ContenidoTvel = () => {
@@ -68,6 +68,7 @@ export const ContenidoTvel = () => {
       const TiempoInMilliseconds = parseTimeToMilliseconds(tiempoM);
       const resultado = TablaPechoMariposa(TiempoInMilliseconds / 1000);
       setResultadosMariposa(resultado);
+      console.log(resultado);
       setErrorMsg('');
     } else {
       setErrorMsg('El tiempo ingresado no tiene el formato correcto (mm:ss:ms)');
@@ -126,13 +127,13 @@ export const ContenidoTvel = () => {
           <td className="td-distancia">25 L</td>
           <td className="td-input">
           <input
-                type="text"
-                pattern="\d{2}:\d{2}:\d{2}"
-                title="Ingrese el tiempo en el formato 00:00:00"
-                placeholder="Tiempo"
-                value={tiempo}
-                onChange={(e) => setTiempo(e.target.value)}
-              />
+  type="text"
+  pattern="^([0-5]\d):([0-5]\d):([0-9][0-9]|[0-8][0-9]|99)$"
+  title="Ingrese el tiempo en el formato 00:00:00"
+  placeholder="Tiempo"
+  value={tiempo}
+  onChange={(e) => setTiempo(e.target.value)}
+/>
           </td>
           <td colSpan="9" className="vacio"></td>
           <td className="blanco">{resultados.rl_1[0] ? formatTime(resultados.rl_1[0] * 1000) : ''}</td>
@@ -330,10 +331,10 @@ export const ContenidoTvel = () => {
         </tr>
         <tr  className="pintar">
           <td className="td-distancia"> 25 E</td>
-          <td>
+          <td className="td-input">
           <input
                 type="text"
-                pattern="\d{2}:\d{2}:\d{2}"
+                pattern="^([0-5]\d):([0-5]\d):([0-9][0-9]|[0-8][0-9]|99)$"
                 title="Ingrese el tiempo en el formato 00:00:00"
                 placeholder="Tiempo"
                 value={tiempoEspalda}
@@ -476,7 +477,7 @@ export const ContenidoTvel = () => {
         </tr>
         <tr  className="pintar">
           <td className="td-distancia">25 M</td>
-          <td>
+          <td className="td-input">
           <input
                 type="text"
                 pattern="\d{2}:\d{2}:\d{2}"
@@ -582,10 +583,10 @@ export const ContenidoTvel = () => {
           <td className="r2">{resultadosMariposa.r2_2[6] ? formatTime(resultadosMariposa.r2_2[6] * 1000) : ''}</td>
           <td className="vo2">{resultadosMariposa.mvo2_1[6] ? formatTime(resultadosMariposa.mvo2_1[6] * 1000) : ''}</td>
           <td className="vo2">{resultadosMariposa.mvo2_2[6] ? formatTime(resultadosMariposa.mvo2_2[6] * 1000) : ''}</td>
-          <td colSpan="4" className="vacio"></td>
+          <td colSpan="4"className="td-button"><button className="calcular" onClick={handleCalcularM}>Calcular</button></td>
         </tr>
         <tr  className="pintar">
-          <td className="td-distancia">350 M</td>
+          <td className="td-distancia">400 M</td>
           <td>{resultadosMariposa.pron[8] ? formatTime(resultadosMariposa.pron[8] * 1000) : ''}</td>
           <td className="r1">{resultadosMariposa.r1_1[7] ? formatTime(resultadosMariposa.r1_1[7] * 1000) : ''}</td>
           <td className="r1">{resultadosMariposa.r1_2[7] ? formatTime(resultadosMariposa.r1_2[7] * 1000) : ''}</td>
@@ -594,18 +595,6 @@ export const ContenidoTvel = () => {
           <td className="r2">{resultadosMariposa.r2_2[7] ? formatTime(resultadosMariposa.r2_2[7] * 1000) : ''}</td>
           <td className="vo2">{resultadosMariposa.mvo2_1[7] ? formatTime(resultadosMariposa.mvo2_1[7] * 1000) : ''}</td>
           <td className="vo2">{resultadosMariposa.mvo2_2[7] ? formatTime(resultadosMariposa.mvo2_2[7] * 1000) : ''}</td>
-          <td colSpan="4"className="td-button"><button className="calcular" onClick={handleCalcularM}>Calcular</button></td>
-        </tr>
-        <tr  className="pintar">
-          <td className="td-distancia">400 M</td>
-          <td>{resultadosMariposa.pron[9] ? formatTime(resultadosMariposa.pron[9] * 1000) : ''}</td>
-          <td className="r1">{resultadosMariposa.r1_1[8] ? formatTime(resultadosMariposa.r1_1[8] * 1000) : ''}</td>
-          <td className="r1">{resultadosMariposa.r1_2[8] ? formatTime(resultadosMariposa.r1_2[8] * 1000) : ''}</td>
-          <td className="r1">{resultadosMariposa.r1_3[8] ? formatTime(resultadosMariposa.r1_3[8] * 1000) : ''}</td>
-          <td className="r2">{resultadosMariposa.r2_1[8] ? formatTime(resultadosMariposa.r2_1[8] * 1000) : ''}</td>
-          <td className="r2">{resultadosMariposa.r2_2[8] ? formatTime(resultadosMariposa.r2_2[8] * 1000) : ''}</td>
-          <td className="vo2">{resultadosMariposa.mvo2_1[8] ? formatTime(resultadosMariposa.mvo2_1[8] * 1000) : ''}</td>
-          <td className="vo2">{resultadosMariposa.mvo2_2[8] ? formatTime(resultadosMariposa.mvo2_2[8] * 1000) : ''}</td>
           <td className="td-button" colSpan="4"> <button className="limpiar"onClick={handleLimpiarM}>Limpiar</button></td>
         </tr>
 
@@ -622,7 +611,7 @@ export const ContenidoTvel = () => {
         </tr>
         <tr  className="pintar">
           <td className="td-distancia">25 P</td>
-          <td>
+          <td className="td-input">
           <input
                 type="text"
                 pattern="\d{2}:\d{2}:\d{2}"
@@ -728,10 +717,10 @@ export const ContenidoTvel = () => {
           <td className="r2">{resultadosPecho.r2_2[6] ? formatTime(resultadosPecho.r2_2[6] * 1000) : ''}</td>
           <td className="vo2">{resultadosPecho.mvo2_1[6] ? formatTime(resultadosPecho.mvo2_1[6] * 1000) : ''}</td>
           <td className="vo2">{resultadosPecho.mvo2_2[6] ? formatTime(resultadosPecho.mvo2_2[6] * 1000) : ''}</td>
-          <td colSpan="4" className="vacio"></td>
+          <td colSpan="4"className="td-button"><button className="calcular" onClick={handleCalcularP}>Calcular</button></td>
         </tr>
         <tr  className="pintar">
-          <td className="td-distancia">350 P</td>
+          <td className="td-distancia">400 P</td>
           <td>{resultadosPecho.pron[8] ? formatTime(resultadosPecho.pron[8] * 1000) : ''}</td>
           <td className="r1">{resultadosPecho.r1_1[7] ? formatTime(resultadosPecho.r1_1[7] * 1000) : ''}</td>
           <td className="r1">{resultadosPecho.r1_2[7] ? formatTime(resultadosPecho.r1_2[7] * 1000) : ''}</td>
@@ -740,18 +729,6 @@ export const ContenidoTvel = () => {
           <td className="r2">{resultadosPecho.r2_2[7] ? formatTime(resultadosPecho.r2_2[7] * 1000) : ''}</td>
           <td className="vo2">{resultadosPecho.mvo2_1[7] ? formatTime(resultadosPecho.mvo2_1[7] * 1000) : ''}</td>
           <td className="vo2">{resultadosPecho.mvo2_2[7] ? formatTime(resultadosPecho.mvo2_2[7] * 1000) : ''}</td>
-          <td colSpan="4"className="td-button"><button className="calcular" onClick={handleCalcularP}>Calcular</button></td>
-        </tr>
-        <tr  className="pintar">
-          <td className="td-distancia">400 P</td>
-          <td>{resultadosPecho.pron[9] ? formatTime(resultadosPecho.pron[9] * 1000) : ''}</td>
-          <td className="r1">{resultadosPecho.r1_1[8] ? formatTime(resultadosPecho.r1_1[8] * 1000) : ''}</td>
-          <td className="r1">{resultadosPecho.r1_2[8] ? formatTime(resultadosPecho.r1_2[8] * 1000) : ''}</td>
-          <td className="r1">{resultadosPecho.r1_3[8] ? formatTime(resultadosPecho.r1_3[8] * 1000) : ''}</td>
-          <td className="r2">{resultadosPecho.r2_1[8] ? formatTime(resultadosPecho.r2_1[8] * 1000) : ''}</td>
-          <td className="r2">{resultadosPecho.r2_2[8] ? formatTime(resultadosPecho.r2_2[8] * 1000) : ''}</td>
-          <td className="vo2">{resultadosPecho.mvo2_1[8] ? formatTime(resultadosPecho.mvo2_1[8] * 1000) : ''}</td>
-          <td className="vo2">{resultadosPecho.mvo2_2[8] ? formatTime(resultadosPecho.mvo2_2[8] * 1000) : ''}</td>
           <td className="td-button" colSpan="4"> <button className="limpiar"onClick={handleLimpiarP}>Limpiar</button></td>
         </tr>
 
@@ -767,7 +744,7 @@ export const ContenidoTvel = () => {
         </tr>
         <tr  className="pintar">
           <td className="td-distancia">100 CI</td>
-          <td>
+          <td className="td-input">
           <input
                 type="text"
                 pattern="\d{2}:\d{2}:\d{2}"

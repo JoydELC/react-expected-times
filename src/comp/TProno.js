@@ -31,8 +31,8 @@ export const TProno = () => {
               {...register("TA", {
                 required: "este campo es obligatorio",
                 pattern: {
-                  value: /^([0-5]?[0-9]):[0-5][0-9]:[0-9]{2}$/,
-                  message: "debe estar en formato mm:ss:msms",
+                  value: /^([0-5]\d):([0-5]\d):([0-9]\d)$/,
+                  message: "debe estar en formato hh:mm:ss (00:00:00)"
                 },
               })}
             />
