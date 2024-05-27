@@ -114,16 +114,16 @@
     }
   
     .table-indv table {
-      width: 100%;
-      font-size: 0.7rem;
+      width: 100vw;
+      font-size: 0.55rem;
       margin-top: 2rem;
       font-weight: bold;
     }
   
     .table-indv input {
-      width: 4rem;
+      width: 3rem;
       height: 1rem;
-      font-size: 0.6rem;
+      font-size: 0.4rem;
     }
   
     .table-indv td {
@@ -156,7 +156,7 @@
     }
   
     .table-indv input {
-      width: 100%;
+      width: 4rem;
       font-size: 0.8rem;
     }
     .calcular, .limpiar {
