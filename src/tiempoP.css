@@ -106,7 +106,17 @@
     font-size: 1rem;
     color: #333;
   }
-  
+  .modal .title-resumen{
+    font-size: 2.2rem;
+    font-weight: bolder;
+    line-height: 2rem;
+    
+  }
+  .modal .resumen {
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.2rem;
+  }
   .modal ul {
     list-style-type: none;
     padding: 0;

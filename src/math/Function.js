@@ -3,8 +3,6 @@ export function tiempo_pronostico(TA, porcentaje, d) {
     const porcentaje_decimal = porcentaje / 100;
     const vp = v+(v * porcentaje_decimal);
     const TP = d / vp;
-    console.log(v)
-    console.log(vp)
     return TP;
     
   }
@@ -197,4 +195,11 @@ export  function tablaCombinado(tiempo25) {
   return {pron, vr1_1, vr1_2, vr1_3, vr2_1, vr2_2, mvo2_1, mvo2_2, rl_1, rl_2}
 } 
 
-console.log(tablaCombinado(65))
+export function comparar(TA, MA, distancia){
+  let vel= distancia/TA;
+  let dif_s = TA-MA;
+  let dif_m =vel*dif_s;
+
+  return {vel, dif_s,dif_m}
+}
+

@@ -39,13 +39,27 @@ export const TProno = () => {
             {errors.TA && <span>{errors.TA.message}</span>}
           </div>
           <div>
+            <label>Marca A (mm:ss:msms) :</label>
+            <input
+              type="text"
+              name="MA"
+              placeholder="Marca A"
+              {...register("MA", {
+                pattern: {
+                  value: /^([0-5]\d):([0-5]\d):([0-9]\d)$/,
+                  message: "debe estar en formato hh:mm:ss (00:00:00)"
+                },
+              })}
+            />
+            {errors.MA && <span>{errors.MA.message}</span>}
+          </div>
+          <div>
             <label>Distancia (mts) :</label>
             <input
               type="text"
               name="d"
               placeholder="Distancia de la prueba"
               {...register("d", {
-                required: "este campo es obligatorio",
                 pattern: {
                   value: /^\d+$/,
                   message: "debe ser un número entero",
@@ -61,7 +75,6 @@ export const TProno = () => {
               name="porc"
               placeholder="Cuanto % voy a mejorar"
               {...register("porc", {
-                required: "este campo es obligatorio",
                 pattern: {
                   value: /^\d+(\.\d+)?$/,
                   message: "debe ser un número",
@@ -85,7 +98,6 @@ export const TProno = () => {
               name="eventos"
               placeholder="Durante cuantos eventos"
               {...register("eventos", {
-                required: "este campo es obligatorio",
                 pattern: {
                   value: /^\d+$/,
                   message: "debe ser un número entero",
