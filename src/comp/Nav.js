@@ -26,6 +26,9 @@ export const Nav = () => {
                     <NavLink to="/tp">Tiempo Pronostico</NavLink>
                 </li>
                 <li>
+                    <NavLink to="/MP">Diferencia de segundos en metros</NavLink>
+                </li>
+                <li>
                     <NavLink to="/tv">Tabla Velocidades</NavLink>
                 </li>
                 <li>

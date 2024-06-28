@@ -1,3 +1,4 @@
+
 /* Estilos del formulario */
 .formTimes {
     max-width: 600px;
@@ -103,7 +104,7 @@
   
   .modal p {
     margin-bottom: 1rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #333;
   }
   .modal .title-resumen{
@@ -113,7 +114,7 @@
     
   }
   .modal .resumen {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: bold;
     line-height: 1.2rem;
   }
@@ -147,7 +148,12 @@
     }
   
     .formTimes h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
+      border-bottom: solid 1px black;
+    }
+    .formTimes {
+      font-size: 1.6rem;
+      line-height: 1.8rem;
     }
   
     .modal {
