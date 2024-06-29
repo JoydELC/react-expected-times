@@ -34,6 +34,9 @@ export const Nav = () => {
                 <li>
                     <NavLink to="/te">Tabla Estilos Progresivo</NavLink>
                 </li>
+                <li>
+                    <NavLink to="/te1">Tabla Una Entrada</NavLink>
+                </li>
             </ul>
         </nav>
     )

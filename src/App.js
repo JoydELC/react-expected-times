@@ -5,6 +5,7 @@ import { TProno } from './comp/TProno';
 import { Tablavel } from './comp/Tablavel';
 import { ContenidoTvel } from './comp/ContenidoTvel';
 import {MProno} from './comp/MProno';
+import {TablaUnaEntrada} from './comp/TablaUnaEntrada';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path='/tp' element={<TProno/>} />
           <Route path='/tv' element={<Tablavel/>} />
           <Route path='/te' element={<ContenidoTvel/>} />
+          <Route path='/te1' element={<TablaUnaEntrada/>} />
         </Routes>
       </BrowserRouter>
     </div>
